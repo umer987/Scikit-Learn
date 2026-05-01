@@ -33,3 +33,7 @@ def create_profile():
 # -------------------------------
 # Career Simulation
 # -------------------------------
+
+def career_simulation(user):
+    print_line()
+    print("💼 Career Simulator")
