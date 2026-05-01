@@ -102,3 +102,9 @@ def budget_planner(user):
         print("✅ Good financial management")
     else:
         print("⚠️ You are overspending!")
+
+    user["history"].append(("Budget", savings))
+
+# -------------------------------
+# Study Strategy
+# -------------------------------
