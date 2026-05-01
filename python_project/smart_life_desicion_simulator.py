@@ -18,3 +18,15 @@ def get_int_input(prompt):
 
 def print_line():
     print("=" * 50)
+
+# -------------------------------
+# User Profile
+# -------------------------------
+
+def create_profile():
+    print_line()
+    print("👤 Create Your Profile")
+    name = input("Enter your name: ")
+    age = get_int_input("Enter your age: ")
+    return {"name": name, "age": age, "history": []}
+
