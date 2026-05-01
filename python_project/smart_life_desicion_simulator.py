@@ -115,3 +115,8 @@ def study_strategy(user):
 
     subjects = ["Math", "Programming", "Physics", "English"]
     weak_subjects = []
+
+    for sub in subjects:
+        level = get_int_input(f"Rate your level in {sub} (1-10): ")
+        if level < 5:
+            weak_subjects.append(sub)
