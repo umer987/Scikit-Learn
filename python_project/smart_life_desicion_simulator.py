@@ -43,3 +43,12 @@ def career_simulation(user):
         "2": ("Doctor", ["biology", "practice", "patience"]),
         "3": ("Businessman", ["risk", "communication", "strategy"])
     }
+
+    for key, value in careers.items():
+        print(f"{key}. {value[0]}")
+
+    choice = input("Choose career: ")
+
+    if choice not in careers:
+        print("❌ Invalid choice")
+        return
