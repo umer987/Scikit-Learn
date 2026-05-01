@@ -52,3 +52,10 @@ def career_simulation(user):
     if choice not in careers:
         print("❌ Invalid choice")
         return
+
+    career_name, skills = careers[choice]
+
+    study_hours = get_int_input("Study hours per day (1-10): ")
+    consistency = get_int_input("Consistency level (1-10): ")
+
+    score = (study_hours * 2) + (consistency * 3)
