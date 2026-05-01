@@ -71,3 +71,10 @@ def career_simulation(user):
     print(f"{user['name']}, Career: {career_name}")
     print(f"Required Skills: {skills}")
     print(f"Result: {result}")
+
+    user["history"].append(("Career", career_name, result))
+
+# -------------------------------
+# Budget Planner
+# -------------------------------
+
