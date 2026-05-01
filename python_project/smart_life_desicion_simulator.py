@@ -120,3 +120,113 @@ def study_strategy(user):
         level = get_int_input(f"Rate your level in {sub} (1-10): ")
         if level < 5:
             weak_subjects.append(sub)
+
+    if weak_subjects:
+        print("⚠️ Focus more on:", weak_subjects)
+    else:
+        print("🔥 You're doing great!")
+
+    user["history"].append(("Study", weak_subjects))
+
+# -------------------------------
+# Daily Routine Optimizer
+# -------------------------------
+
+def routine_optimizer(user):
+    print_line()
+    print("⏰ Routine Optimizer")
+
+    sleep = get_int_input("Hours of sleep: ")
+    study = get_int_input("Hours of study: ")
+    exercise = get_int_input("Exercise hours: ")
+
+    score = sleep + study + exercise
+
+    if score >= 15:
+        print("🔥 Excellent routine")
+    elif score >= 10:
+        print("⚠️ متوسط routine")
+    else:
+        print("❌ Poor routine")
+
+    user["history"].append(("Routine", score))
+
+# -------------------------------
+# Recursive Future Projection
+# -------------------------------
+
+def future_growth(years, growth):
+    """Recursive function"""
+    if years == 0:
+        return 0
+    return growth + future_growth(years - 1, growth)
+
+def future_simulation(user):
+    print_line()
+    print("🔮 Future Prediction")
+
+    years = get_int_input("Enter number of years: ")
+    growth = get_int_input("Enter yearly growth score: ")
+
+    result = future_growth(years, growth)
+
+    print(f"📈 Total Growth after {years} years: {result}")
+
+    user["history"].append(("Future", result))
+
+# -------------------------------
+# View History
+# -------------------------------
+
+def view_history(user):
+    print_line()
+    print("📜 Your Decision History")
+
+    for item in user["history"]:
+        print(item)
+
+# -------------------------------
+# Main Menu
+# -------------------------------
+
+def main():
+    print("🌟 Welcome to Smart Life Decision Simulator 🌟")
+
+    user = create_profile()
+
+    while True:
+        print_line()
+        print("1. Career Simulator")
+        print("2. Budget Planner")
+        print("3. Study Strategy")
+        print("4. Routine Optimizer")
+        print("5. Future Prediction")
+        print("6. View History")
+        print("0. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            career_simulation(user)
+        elif choice == "2":
+            budget_planner(user)
+        elif choice == "3":
+            study_strategy(user)
+        elif choice == "4":
+            routine_optimizer(user)
+        elif choice == "5":
+            future_simulation(user)
+        elif choice == "6":
+            view_history(user)
+        elif choice == "0":
+            print("👋 Goodbye!")
+            break
+        else:
+            print("❌ Invalid choice")
+
+# -------------------------------
+# Run Program
+# -------------------------------
+
+if __name__ == "__main__":
+    main()
