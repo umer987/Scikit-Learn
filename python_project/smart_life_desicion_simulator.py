@@ -78,3 +78,11 @@ def career_simulation(user):
 # Budget Planner
 # -------------------------------
 
+def budget_planner(user):
+    print_line()
+    print("💰 Budget Planner")
+
+    income = get_int_input("Enter your monthly income: ")
+    expenses = []
+
+    while True:
