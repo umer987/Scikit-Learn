@@ -30,3 +30,6 @@ def create_profile():
     age = get_int_input("Enter your age: ")
     return {"name": name, "age": age, "history": []}
 
+# -------------------------------
+# Career Simulation
+# -------------------------------
