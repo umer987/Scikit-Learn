@@ -90,3 +90,6 @@ def budget_planner(user):
         if exp == 0:
             break
         expenses.append(exp)
+
+    total_expense = sum(expenses)
+    savings = income - total_expense
