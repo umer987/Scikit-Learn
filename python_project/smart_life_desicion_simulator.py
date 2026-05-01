@@ -59,3 +59,10 @@ def career_simulation(user):
     consistency = get_int_input("Consistency level (1-10): ")
 
     score = (study_hours * 2) + (consistency * 3)
+
+    if score >= 40:
+        result = "🔥 High Success"
+    elif score >= 25:
+        result = "⚠️ Moderate Success"
+    else:
+        result = "❌ Low Success"
