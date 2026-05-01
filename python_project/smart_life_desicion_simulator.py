@@ -37,3 +37,9 @@ def create_profile():
 def career_simulation(user):
     print_line()
     print("💼 Career Simulator")
+
+    careers = {
+        "1": ("Software Engineer", ["coding", "logic", "projects"]),
+        "2": ("Doctor", ["biology", "practice", "patience"]),
+        "3": ("Businessman", ["risk", "communication", "strategy"])
+    }
