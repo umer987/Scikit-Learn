@@ -93,3 +93,12 @@ def budget_planner(user):
 
     total_expense = sum(expenses)
     savings = income - total_expense
+
+    print_line()
+    print(f"Total Expense: {total_expense}")
+    print(f"Savings: {savings}")
+
+    if savings > 0:
+        print("✅ Good financial management")
+    else:
+        print("⚠️ You are overspending!")
