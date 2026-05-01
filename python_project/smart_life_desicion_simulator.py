@@ -86,3 +86,7 @@ def budget_planner(user):
     expenses = []
 
     while True:
+        exp = get_int_input("Enter expense (0 to stop): ")
+        if exp == 0:
+            break
+        expenses.append(exp)
