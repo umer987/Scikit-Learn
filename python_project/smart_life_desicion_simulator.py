@@ -108,3 +108,7 @@ def budget_planner(user):
 # -------------------------------
 # Study Strategy
 # -------------------------------
+
+def study_strategy(user):
+    print_line()
+    print("📚 Study Strategy")
