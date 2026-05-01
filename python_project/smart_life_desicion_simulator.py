@@ -66,3 +66,8 @@ def career_simulation(user):
         result = "⚠️ Moderate Success"
     else:
         result = "❌ Low Success"
+
+    print_line()
+    print(f"{user['name']}, Career: {career_name}")
+    print(f"Required Skills: {skills}")
+    print(f"Result: {result}")
