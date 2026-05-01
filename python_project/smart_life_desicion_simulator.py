@@ -112,3 +112,6 @@ def budget_planner(user):
 def study_strategy(user):
     print_line()
     print("📚 Study Strategy")
+
+    subjects = ["Math", "Programming", "Physics", "English"]
+    weak_subjects = []
